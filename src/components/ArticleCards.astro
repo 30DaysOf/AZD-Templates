@@ -77,16 +77,18 @@ const uniqueTags = Array.from(allTags).sort();
 </div>
 
 <script>
-  // Search functionality
-  const searchInput = document.getElementById('search-input') as HTMLInputElement;
-  const articlesGrid = document.getElementById('articles-grid') as HTMLElement;
-  const noResults = document.getElementById('no-results') as HTMLElement;
-  const tagFilters = document.querySelectorAll('.tag-filter');
-  const sortSelect = document.getElementById('sort-select') as HTMLSelectElement;
-  
-  let activeTag = 'all';
+  // Wait for DOM to be fully loaded
+  document.addEventListener('DOMContentLoaded', () => {
+    // Search functionality
+    const searchInput = document.getElementById('search-input') as HTMLInputElement;
+    const articlesGrid = document.getElementById('articles-grid') as HTMLElement;
+    const noResults = document.getElementById('no-results') as HTMLElement;
+    const tagFilters = document.querySelectorAll('.tag-filter');
+    const sortSelect = document.getElementById('sort-select') as HTMLSelectElement;
+    
+    let activeTag = 'all';
 
-  function filterAndSortArticles() {
+    function filterAndSortArticles() {
     const searchTerm = searchInput.value.toLowerCase();
     const articles = Array.from(document.querySelectorAll('.article-card'));
     let visibleCount = 0;
@@ -152,6 +154,7 @@ const uniqueTags = Array.from(allTags).sort();
       activeTag = button.getAttribute('data-tag') || 'all';
       filterAndSortArticles();
     });
+  });
   });
 </script>
 
