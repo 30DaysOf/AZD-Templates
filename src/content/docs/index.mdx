@@ -1,0 +1,41 @@
+---
+title: Welcome to AZD Templates
+description: Jumpstart your AI Solution Development with AI App Templates
+template: splash
+hero:
+  tagline: Comprehensive collection of Azure Developer CLI templates and solutions for AI applications
+  image:
+    file: ../../assets/hero.svg
+  actions:
+    - text: Get Started
+      link: /AZD-Templates/1-app-scenario/overview/
+      icon: right-arrow
+      variant: primary
+    - text: View on GitHub
+      link: https://github.com/30DaysOf/AZD-Templates
+      icon: external
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import ArticleCards from '../../components/ArticleCards.astro';
+
+## Quick Navigation
+
+<CardGrid>
+  <Card title="App Scenario" icon="puzzle">
+    Explore real-world application scenarios and use cases for AI solutions.
+  </Card>
+  <Card title="Infra Setup" icon="setting">
+    Learn how to set up and configure Azure infrastructure for your projects.
+  </Card>
+  <Card title="Solution Templates" icon="document">
+    Ready-to-use templates to accelerate your AI solution development.
+  </Card>
+  <Card title="Experimentation Sandbox" icon="laptop">
+    Test and experiment with different AI technologies and approaches.
+  </Card>
+</CardGrid>
+
+## All Articles
+
+<ArticleCards />
