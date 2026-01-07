@@ -1,0 +1,90 @@
+/* Custom styles for AZD Templates documentation site */
+
+:root {
+  --sl-color-accent-low: #1e3a8a;
+  --sl-color-accent: #3b82f6;
+  --sl-color-accent-high: #60a5fa;
+}
+
+/* Enhanced card styling */
+.sl-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sl-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Improve code block styling */
+pre {
+  border-radius: 0.5rem;
+  border: 1px solid var(--sl-color-gray-5);
+}
+
+/* Better table styling */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+table th {
+  background: var(--sl-color-gray-6);
+  padding: 0.75rem;
+  font-weight: 600;
+}
+
+table td {
+  padding: 0.75rem;
+  border-top: 1px solid var(--sl-color-gray-5);
+}
+
+/* Hero section enhancements */
+.hero {
+  text-align: center;
+}
+
+.hero > img {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .hero > img {
+    max-width: 300px;
+  }
+}
+
+/* Syntax highlighting improvements */
+code {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.9em;
+}
+
+/* Improve link visibility */
+a:not(.card-link) {
+  color: var(--sl-color-accent-high);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+a:not(.card-link):hover {
+  text-decoration-thickness: 2px;
+}
+
+/* Better list styling */
+ul, ol {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Card grid improvements */
+.sl-card-grid {
+  gap: 1.5rem;
+}

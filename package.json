@@ -1,0 +1,29 @@
+{
+  "name": "azd-templates",
+  "version": "1.0.0",
+  "description": "Jumpstart your AI Solution Development with AI App Templates",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "keywords": [
+    "azure",
+    "ai",
+    "templates",
+    "azd",
+    "documentation"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@astrojs/check": "^0.9.6",
+    "@astrojs/starlight": "^0.37.2",
+    "astro": "^5.16.6",
+    "sharp": "^0.34.5",
+    "typescript": "^5.9.3"
+  }
+}
