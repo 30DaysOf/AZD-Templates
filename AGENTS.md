@@ -11,6 +11,38 @@ This document provides comprehensive technical information about the 30 Days of 
 **Node Version**: 20.x  
 **Package Manager**: npm
 
+## Target Audience & Content Guidelines
+
+**Audience**: Beginners with a technical or professional background who are new to Azure Developer CLI and AI application deployment. They have foundational knowledge but need clear, practical guidance.
+
+**Content Writing Principles**:
+
+1. **Clear & Action-Oriented**: Use concise, direct language focused on what learners will do
+   - ✅ "Deploy your first AI application with AZD"
+   - ❌ "Leveraging the synergistic capabilities of AZD for deployment optimization"
+
+2. **Reference Requirements**: Every lesson must include at least 3 references with minimum 2 from Microsoft Docs
+   - Ensures authoritative, up-to-date information
+   - Provides pathways for deeper learning
+
+3. **Simple & Friendly Language**: Avoid buzzwords, jargon, and fancy terminology
+   - ✅ "Connect your app to the cloud"
+   - ❌ "Establish cloud-native integration paradigms"
+   - Explain technical terms when first introduced
+
+4. **Use Analogies**: Include relatable analogies to explain complex concepts
+   - Format: Info admonition with home icon (`:house:` or home icon)
+   - Example: "Think of AZD templates like a recipe for baking - it lists all ingredients (services) and steps (configuration) needed"
+   - Use everyday comparisons (cooking, home organization, travel) for technical concepts
+
+**Example Admonition Structure**:
+
+```markdown
+:::tip[Think of it like...]
+Just like a house blueprint shows where each room goes, an AZD template maps out where each service fits in your application.
+:::
+```
+
 ## Architecture
 
 ### Technology Stack
@@ -399,7 +431,8 @@ npm run build
 
 ### Links Not Working
 
-- Check base path: `/AZD-Templates` prefix required
+- Check base path: `/AZD-Templates` prefix required for hero buttons and external links in lessons.json
+- Internal sidebar links are relative (start with `/`) - Astro applies base automatically
 - Verify `astro.config.mjs` base setting
 - Check trailing slashes in links
 
