@@ -1,26 +1,27 @@
 {
-  "name": "azd-templates",
+  "name": "30-days-azd-templates",
   "version": "1.0.0",
-  "description": "Jumpstart your AI Solution Development with AI App Templates",
+  "description": "A month-long journey from fundamentals to production-ready AI solutions with Azure Developer CLI",
   "type": "module",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro check && astro build",
-    "preview": "astro preview",
+    "dev": "astro telemetry disable && astro dev --host 127.0.0.1",
+    "start": "astro telemetry disable && astro dev --host",
+    "build": "astro telemetry disable && astro check && astro build",
+    "preview": "astro telemetry disable && astro preview --host",
     "astro": "astro"
   },
   "keywords": [
     "azure",
     "ai",
-    "templates",
     "azd",
-    "documentation"
+    "templates",
+    "learning",
+    "education"
   ],
-  "author": "",
+  "author": "30DaysOf",
   "license": "MIT",
   "dependencies": {
-    "@astrojs/check": "^0.9.6",
+    "@astrojs/check": "^0.9.4",
     "@astrojs/starlight": "^0.37.2",
     "astro": "^5.16.6",
     "sharp": "^0.34.5",

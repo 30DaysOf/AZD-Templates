@@ -1,14 +1,14 @@
 ---
-title: Welcome to AZD Templates
-description: Jumpstart your AI Solution Development with AI App Templates
+title: 30 Days of AZD Templates
+description: Your month-long journey from AI fundamentals to production-ready solutions with Azure Developer CLI
 template: splash
 hero:
-  tagline: Comprehensive collection of Azure Developer CLI templates and solutions for AI applications
+  tagline: A month-long journey from fundamentals to production-ready AI solutions with Azure Developer CLI
   image:
     file: ../../assets/hero.svg
   actions:
     - text: Get Started
-      link: /AZD-Templates/1-app-scenario/overview/
+      link: /00-introduction/
       icon: right-arrow
       variant: primary
     - text: View on GitHub
@@ -16,26 +16,42 @@ hero:
       icon: external
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
-import ArticleCards from '../../components/ArticleCards.astro';
+import { Card, CardGrid } from "@astrojs/starlight/components";
+import LessonCards from "../../components/LessonCards.astro";
 
-## Quick Navigation
+## Course Overview
+
+Learn to build production-ready AI applications on Azure through a structured 30-day curriculum covering fundamentals, Azure Developer CLI mastery, real-world deconstruction, and hands-on experimentation.
 
 <CardGrid>
-  <Card title="App Scenario" icon="puzzle">
-    Explore real-world application scenarios and use cases for AI solutions.
+  <Card title="Week 0: Introduction" icon="information">
+    Start your journey with course overview, learning objectives, and
+    prerequisites for success.
   </Card>
-  <Card title="Infra Setup" icon="setting">
-    Learn how to set up and configure Azure infrastructure for your projects.
+  <Card title="Week 1: Fundamentals" icon="open-book">
+    Master Microsoft Foundry, AI architecture, and provisioning approaches from
+    manual to automated.
   </Card>
-  <Card title="Solution Templates" icon="document">
-    Ready-to-use templates to accelerate your AI solution development.
+  <Card title="Week 2: AZD Deep Dive" icon="seti:config">
+    Install, configure, and master Azure Developer CLI commands, templates, and
+    workflows.
   </Card>
-  <Card title="Experimentation Sandbox" icon="laptop">
-    Test and experiment with different AI technologies and approaches.
+  <Card title="Week 3: Deconstruction" icon="magnifier">
+    Analyze real AI Agents templates to understand production-ready application
+    structure.
+  </Card>
+  <Card title="Week 4: Experimentation" icon="rocket">
+    Build from prototypes to production with hands-on exercises and real-world
+    projects.
+  </Card>
+  <Card title="Week 5: Summary" icon="approve-check">
+    Celebrate your achievements, recap key learnings, and explore next steps in
+    your AI journey.
   </Card>
 </CardGrid>
 
-## All Articles
+## All Lessons
 
-<ArticleCards />
+Browse, search, and filter all 30 lessons. Use the search box to find specific topics, filter by week, or sort as you prefer.
+
+<LessonCards />

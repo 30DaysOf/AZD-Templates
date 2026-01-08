@@ -1,0 +1,238 @@
+[
+  {
+    "title": "0.1 - Welcome to 30DaysOfAZD",
+    "link": "/AZD-Templates/00-introduction/",
+    "week": "Week 0",
+    "tags": ["Quickstart", "Overview"],
+    "description": "Begin your month-long journey from AI fundamentals to production-ready solutions with Azure Developer CLI.",
+    "lastUpdated": "2026-01-08T00:00:00Z"
+  },
+  {
+    "title": "1.1 - Introduction to Microsoft Foundry",
+    "link": "/AZD-Templates/01-fundamentals/day-1-microsoft-foundry/",
+    "week": "Week 1",
+    "tags": ["Platform", "Services"],
+    "description": "Explore Microsoft Foundry as a unified platform for building, deploying, and managing AI applications with integrated tools and services.",
+    "lastUpdated": "2026-01-08T00:00:00Z"
+  },
+  {
+    "title": "1.2 - Enterprise Retail AI Scenario",
+    "link": "/AZD-Templates/01-fundamentals/day-2-retail-ai-scenario/",
+    "week": "Week 1",
+    "tags": ["Scenario", "Architecture"],
+    "description": "Understand real-world AI application architecture through a retail scenario with customer service automation and inventory management."
+  },
+  {
+    "title": "1.3 - App Development Lifecycle",
+    "link": "/AZD-Templates/01-fundamentals/day-3-app-lifecycle/",
+    "week": "Week 1",
+    "tags": ["Concepts", "Cloud"],
+    "description": "Learn the complete journey from ideation to production deployment, covering planning, development, testing, and operations."
+  },
+  {
+    "title": "1.4 - AI App Architecture",
+    "link": "/AZD-Templates/01-fundamentals/day-4-ai-architecture/",
+    "week": "Week 1",
+    "tags": ["Architecture", "RAG"],
+    "description": "Master key architectural patterns for AI applications including RAG, vector search, and multi-agent orchestration."
+  },
+  {
+    "title": "1.5 - Manual Provisioning",
+    "link": "/AZD-Templates/01-fundamentals/day-5-manual-provisioning/",
+    "week": "Week 1",
+    "tags": ["Portal", "Infrastructure"],
+    "description": "Step through manual Azure resource creation to understand the foundational setup before automation with IaC tools."
+  },
+  {
+    "title": "1.6 - ARM Templates",
+    "link": "/AZD-Templates/01-fundamentals/day-6-arm-templates/",
+    "week": "Week 1",
+    "tags": ["Bicep", "IaC"],
+    "description": "Explore Infrastructure as Code with ARM and Bicep templates for reproducible and version-controlled Azure deployments.",
+    "lastUpdated": "2026-01-08T00:00:00Z"
+  },
+  {
+    "title": "1.7 - AZD Templates Introduction",
+    "link": "/AZD-Templates/01-fundamentals/day-7-azd-templates/",
+    "week": "Week 1",
+    "tags": ["AZD", "Templates"],
+    "description": "Discover how Azure Developer CLI templates simplify cloud-native development with opinionated project structures and automation.",
+    "lastUpdated": "2026-01-08T00:00:00Z"
+  },
+  {
+    "title": "2.1 - AZD Workflow",
+    "link": "/AZD-Templates/02-azd-deep-dive/day-8-azd-workflow/",
+    "week": "Week 2",
+    "tags": ["AZD", "Workflow"],
+    "description": "Understand the end-to-end AZD workflow from init to up, and how it streamlines cloud provisioning and deployment.",
+    "lastUpdated": "2026-01-08T00:00:00Z"
+  },
+  {
+    "title": "2.2 - Installation & Commands",
+    "link": "/AZD-Templates/02-azd-deep-dive/day-9-installation/",
+    "week": "Week 2",
+    "tags": ["Setup", "CLI"],
+    "description": "Install Azure Developer CLI across platforms and master essential commands for project management and deployment.",
+    "lastUpdated": "2026-01-08T00:00:00Z"
+  },
+  {
+    "title": "2.3 - Finding Templates",
+    "link": "/AZD-Templates/02-azd-deep-dive/day-10-finding-templates/",
+    "week": "Week 2",
+    "tags": ["Templates", "Discovery"],
+    "description": "Discover AZD templates through the gallery, GitHub repositories, and community resources for your project needs.",
+    "lastUpdated": "2026-01-07T00:00:00Z"
+  },
+  {
+    "title": "2.4 - Creating Templates",
+    "link": "/AZD-Templates/02-azd-deep-dive/day-11-creating-templates/",
+    "week": "Week 2",
+    "tags": ["Templates", "Development"],
+    "description": "Build custom AZD templates with proper structure, configuration files, and infrastructure definitions for reusability.",
+    "lastUpdated": "2026-01-07T00:00:00Z"
+  },
+  {
+    "title": "2.5 - Deploying Templates",
+    "link": "/AZD-Templates/02-azd-deep-dive/day-12-deploying/",
+    "week": "Week 2",
+    "tags": ["Deployment", "Production"],
+    "description": "Deploy AZD templates to Azure with confidence, understanding provisioning, environment management, and troubleshooting.",
+    "lastUpdated": "2026-01-07T00:00:00Z"
+  },
+  {
+    "title": "2.6 - Deconstructing Templates",
+    "link": "/AZD-Templates/02-azd-deep-dive/day-13-deconstructing/",
+    "week": "Week 2",
+    "tags": ["Analysis", "Structure"],
+    "description": "Analyze existing AZD templates to understand their architecture, configuration patterns, and best practices.",
+    "lastUpdated": "2026-01-07T00:00:00Z"
+  },
+  {
+    "title": "2.7 - AZD Extensions",
+    "link": "/AZD-Templates/02-azd-deep-dive/day-14-extensions/",
+    "week": "Week 2",
+    "tags": ["Extensions", "Hooks"],
+    "description": "Extend AZD functionality with hooks, custom scripts, and integrations to customize your deployment workflow.",
+    "lastUpdated": "2026-01-07T00:00:00Z"
+  },
+  {
+    "title": "3.1 - AI Agents Template",
+    "link": "/AZD-Templates/03-deconstruction/day-15-ai-agents-intro/",
+    "week": "Week 3",
+    "tags": ["Agents", "Templates"],
+    "description": "Introduction to production-ready AI Agents templates with multi-agent orchestration and real-world use cases.",
+    "lastUpdated": "2026-01-06T00:00:00Z"
+  },
+  {
+    "title": "3.2 - Deploy & Explore",
+    "link": "/AZD-Templates/03-deconstruction/day-16-deploy-explore/",
+    "week": "Week 3",
+    "tags": ["Deployment", "Exploration"],
+    "description": "Deploy an AI Agents template to Azure and explore the provisioned resources, services, and application structure.",
+    "lastUpdated": "2026-01-06T00:00:00Z"
+  },
+  {
+    "title": "3.3 - Repository Structure",
+    "link": "/AZD-Templates/03-deconstruction/day-17-repository-structure/",
+    "week": "Week 3",
+    "tags": ["Code", "Structure"],
+    "description": "Understand the organization of an AI Agents codebase including app code, infrastructure, configuration, and tests.",
+    "lastUpdated": "2026-01-06T00:00:00Z"
+  },
+  {
+    "title": "3.4 - Search & Models",
+    "link": "/AZD-Templates/03-deconstruction/day-18-search-models/",
+    "week": "Week 3",
+    "tags": ["Search", "Models"],
+    "description": "Examine how AI Search and language models work together to provide intelligent, context-aware responses.",
+    "lastUpdated": "2026-01-06T00:00:00Z"
+  },
+  {
+    "title": "3.5 - Tracing & Application",
+    "link": "/AZD-Templates/03-deconstruction/day-19-tracing-application/",
+    "week": "Week 3",
+    "tags": ["Monitoring", "Tracing"],
+    "description": "Implement observability with distributed tracing to monitor agent behavior, performance, and debugging insights.",
+    "lastUpdated": "2026-01-06T00:00:00Z"
+  },
+  {
+    "title": "3.6 - Agent Evaluations",
+    "link": "/AZD-Templates/03-deconstruction/day-20-evaluations/",
+    "week": "Week 3",
+    "tags": ["Testing", "Quality"],
+    "description": "Evaluate AI agent quality with automated testing, metrics collection, and continuous improvement workflows.",
+    "lastUpdated": "2026-01-06T00:00:00Z"
+  },
+  {
+    "title": "3.7 - Agent Extensions",
+    "link": "/AZD-Templates/03-deconstruction/day-21-agent-extensions/",
+    "week": "Week 3",
+    "tags": ["Extensions", "Tools"],
+    "description": "Extend agent capabilities with custom tools, plugins, and integrations for domain-specific functionality.",
+    "lastUpdated": "2026-01-06T00:00:00Z"
+  },
+  {
+    "title": "4.1 - Modify Template",
+    "link": "/AZD-Templates/04-experimentation/day-22-modify-template/",
+    "week": "Week 4",
+    "tags": ["Customization", "Exercise"],
+    "description": "Hands-on exercise to customize an existing AZD template for your specific requirements and use case.",
+    "lastUpdated": "2026-01-05T00:00:00Z"
+  },
+  {
+    "title": "4.2 - Deploy Solution",
+    "link": "/AZD-Templates/04-experimentation/day-23-deploy-solution/",
+    "week": "Week 4",
+    "tags": ["Deployment", "Exercise"],
+    "description": "Deploy your customized solution to Azure, validate functionality, and troubleshoot common deployment issues.",
+    "lastUpdated": "2026-01-05T00:00:00Z"
+  },
+  {
+    "title": "4.3 - Model Creation",
+    "link": "/AZD-Templates/04-experimentation/day-24-model-creation/",
+    "week": "Week 4",
+    "tags": ["Models", "Code"],
+    "description": "Build and integrate AI models using Azure OpenAI, custom models, or open-source alternatives in your application.",
+    "lastUpdated": "2026-01-05T00:00:00Z"
+  },
+  {
+    "title": "4.4 - Agent Creation",
+    "link": "/AZD-Templates/04-experimentation/day-25-agent-creation/",
+    "week": "Week 4",
+    "tags": ["Agents", "Code"],
+    "description": "Create custom AI agents from scratch with proper orchestration, memory management, and tool integration.",
+    "lastUpdated": "2026-01-05T00:00:00Z"
+  },
+  {
+    "title": "4.5 - Idea to Prototype",
+    "link": "/AZD-Templates/04-experimentation/day-26-idea-to-prototype/",
+    "week": "Week 4",
+    "tags": ["Prototyping", "SDK"],
+    "description": "Rapidly prototype AI solutions from concept to working demo using Azure AI SDK and development best practices.",
+    "lastUpdated": "2026-01-05T00:00:00Z"
+  },
+  {
+    "title": "4.6 - Prototype to Production",
+    "link": "/AZD-Templates/04-experimentation/day-27-prototype-to-production/",
+    "week": "Week 4",
+    "tags": ["Production", "Quality"],
+    "description": "Transform prototypes into production-ready applications with security, scalability, and monitoring considerations.",
+    "lastUpdated": "2026-01-05T00:00:00Z"
+  },
+  {
+    "title": "4.7 - Production to Adoption",
+    "link": "/AZD-Templates/04-experimentation/day-28-production-to-adoption/",
+    "week": "Week 4",
+    "tags": ["Operations", "Scaling"],
+    "description": "Manage deployed applications with CI/CD, monitoring, user feedback, and continuous improvement strategies.",
+    "lastUpdated": "2026-01-05T00:00:00Z"
+  },
+  {
+    "title": "5.1 - Course Recap & Next Steps",
+    "link": "/AZD-Templates/05-summary/",
+    "week": "Week 5",
+    "tags": ["Review", "Resources"],
+    "description": "Celebrate your journey and explore what comes next as you continue building production-ready AI solutions.",
+    "lastUpdated": "2026-01-08T00:00:00Z"
+  }
+]

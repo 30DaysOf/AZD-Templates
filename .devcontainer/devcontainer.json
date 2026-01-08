@@ -1,17 +1,12 @@
 {
   "name": "AZD Templates Dev Container",
   "image": "mcr.microsoft.com/devcontainers/javascript-node:1-20-bookworm",
-  
+
   "features": {
-    "ghcr.io/devcontainers/features/python:1": {
-      "version": "3.12"
-    },
-    "ghcr.io/devcontainers/features/azure-cli:1": {
-      "version": "latest"
-    },
-    "ghcr.io/devcontainers/features/github-cli:1": {
-      "version": "latest"
-    }
+    "ghcr.io/devcontainers/features/python:1": {},
+    "ghcr.io/devcontainers/features/azure-cli:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/azure/azure-dev/azd:0": {}
   },
 
   "customizations": {
@@ -24,7 +19,8 @@
         "ms-python.vscode-pylance",
         "ms-azuretools.vscode-azurefunctions",
         "ms-vscode.azurecli",
-        "GitHub.copilot"
+        "GitHub.copilot",
+        "ms-azuretools.vscode-bicep"
       ],
       "settings": {
         "editor.formatOnSave": true,

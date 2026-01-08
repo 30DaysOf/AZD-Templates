@@ -1,0 +1,333 @@
+---
+import { Card } from '@astrojs/starlight/components';
+import lessonsData from '../data/lessons.json';
+
+const lessons = lessonsData;
+---
+
+<div class="lesson-browser">
+  <div class="controls">
+    <input type="text" id="searchInput" placeholder="Search lessons..." class="search-input" />
+    
+    <div class="filters">
+      <select id="weekFilter" class="filter-select">
+        <option value="all">All Weeks</option>
+        <option value="Week 0">Week 0: Introduction</option>
+        <option value="Week 1">Week 1: Fundamentals</option>
+        <option value="Week 2">Week 2: AZD Deep Dive</option>
+        <option value="Week 3">Week 3: Deconstruction</option>
+        <option value="Week 4">Week 4: Experimentation</option>
+        <option value="Week 5">Week 5: Summary</option>
+      </select>
+      
+      <select id="tagFilter" class="filter-select">
+        <option value="all">All Topics</option>
+        <option value="AZD">AZD</option>
+        <option value="Templates">Templates</option>
+        <option value="Architecture">Architecture</option>
+        <option value="Agents">Agents</option>
+        <option value="Deployment">Deployment</option>
+        <option value="Exercises">Exercises</option>
+        <option value="Infrastructure">Infrastructure</option>
+        <option value="Monitoring">Monitoring</option>
+      </select>
+      
+      <select id="sortOrder" class="filter-select">
+        <option value="order">Lesson Order</option>
+        <option value="updated">Recently Updated</option>
+      </select>
+    </div>
+  </div>
+
+  <div id="lessonCount" class="lesson-count">Showing {lessons.length} lessons</div>
+
+  <div class="lesson-grid" id="lessonGrid">
+    {lessons.map((lesson) => (
+      <div class="lesson-card" data-week={lesson.week} data-tags={lesson.tags.join(',')} data-title={lesson.title.toLowerCase()} data-updated={lesson.lastUpdated}>
+        <a href={lesson.link} class="card-link">
+          <div class="card-header">
+            <h3>{lesson.title}</h3>
+            <p class="card-description">{lesson.description}</p>
+          </div>
+          <div class="card-spacer"></div>
+          <div class="card-tags">
+            <span class="tag week-tag">{lesson.week}</span>
+            {lesson.tags.map((tag) => (
+              <span class="tag">{tag}</span>
+            ))}
+          </div>
+        </a>
+      </div>
+    ))}
+  </div>
+</div>
+
+<style>
+  .lesson-browser {
+    margin: 2rem -2rem;
+    padding: 0 2rem;
+    max-width: 100%;
+  }
+
+  .controls {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .search-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    background: var(--sl-color-black);
+    color: var(--sl-color-white);
+  }
+
+  .search-input:focus {
+    outline: none;
+    border-color: var(--sl-color-accent);
+  }
+
+  .filters {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .filter-select {
+    flex: 1;
+    min-width: 200px;
+    height: 3rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+    background: var(--sl-color-black);
+    color: var(--sl-color-white);
+    cursor: pointer;
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  .lesson-count {
+    margin-bottom: 1rem;
+    color: var(--sl-color-gray-3);
+    font-size: 0.9rem;
+  }
+
+  .lesson-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-auto-rows: 1fr;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    width: 100%;
+    align-items: start;
+  }
+
+  .lesson-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.75rem;
+    transition: all 0.2s;
+    background: var(--sl-color-black);
+    overflow: hidden;
+    margin: 0;
+  }
+
+  .lesson-card:hover {
+    border-color: var(--sl-color-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .lesson-card.hidden {
+    display: none;
+  }
+
+  .card-link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .card-header h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    color: var(--sl-color-white);
+  }
+
+  .card-description {
+    margin: 0 0 0 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--sl-color-gray-3);
+  }
+
+  .card-spacer {
+    flex: 1;
+    min-height: 1rem;
+  }
+
+  .card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    background: var(--sl-color-gray-6);
+    color: var(--sl-color-gray-2);
+  }
+
+  .week-tag {
+    font-weight: 600;
+  }
+
+  .lesson-card[data-week="Week 0"] .week-tag {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    color: #1a1a1a;
+  }
+
+  .lesson-card[data-week="Week 1"] .week-tag {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+  }
+
+  .lesson-card[data-week="Week 2"] .week-tag {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+  }
+
+  .lesson-card[data-week="Week 3"] .week-tag {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+  }
+
+  .lesson-card[data-week="Week 4"] .week-tag {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    color: #1a1a1a;
+  }
+
+  .lesson-card[data-week="Week 5"] .week-tag {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    color: #1a1a1a;
+  }
+
+  @media (max-width: 768px) {
+    .lesson-browser {
+      margin: 1rem -1rem;
+      padding: 0 1rem;
+    }
+    
+    .lesson-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .filters {
+      flex-direction: column;
+    }
+    
+    .filter-select {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1200px) {
+    .lesson-grid {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+  }
+
+  @media (min-width: 1201px) {
+    .lesson-browser {
+      margin: 2rem -3rem;
+      padding: 0 3rem;
+    }
+    
+    .lesson-grid {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('searchInput') as HTMLInputElement;
+    const weekFilter = document.getElementById('weekFilter') as HTMLSelectElement;
+    const tagFilter = document.getElementById('tagFilter') as HTMLSelectElement;
+    const sortOrder = document.getElementById('sortOrder') as HTMLSelectElement;
+    const lessonGrid = document.getElementById('lessonGrid');
+    const lessonCount = document.getElementById('lessonCount');
+    const cards = Array.from(document.querySelectorAll('.lesson-card'));
+
+    function filterAndSort() {
+      const searchTerm = searchInput.value.toLowerCase();
+      const selectedWeek = weekFilter.value;
+      const selectedTag = tagFilter.value;
+      const sortBy = sortOrder.value;
+
+      let visibleCards = cards.filter((card) => {
+        const cardElement = card as HTMLElement;
+        const title = cardElement.dataset.title || '';
+        const week = cardElement.dataset.week || '';
+        const tags = cardElement.dataset.tags || '';
+
+        const matchesSearch = title.includes(searchTerm);
+        const matchesWeek = selectedWeek === 'all' || week === selectedWeek;
+        const matchesTags = selectedTag === 'all' || tags.includes(selectedTag);
+
+        return matchesSearch && matchesWeek && matchesTags;
+      });
+
+      // Sort
+      if (sortBy === 'title') {
+        visibleCards.sort((a, b) => {
+          const titleA = (a as HTMLElement).dataset.title || '';
+          const titleB = (b as HTMLElement).dataset.title || '';
+          return titleA.localeCompare(titleB);
+        });
+      } else if (sortBy === 'updated') {
+        visibleCards.sort((a, b) => {
+          const dateA = new Date((a as HTMLElement).dataset.updated || '');
+          const dateB = new Date((b as HTMLElement).dataset.updated || '');
+          return dateB.getTime() - dateA.getTime(); // Most recent first
+        });
+      }
+      // Default 'order' keeps the original array order
+
+      // Hide all cards first
+      cards.forEach(card => card.classList.add('hidden'));
+
+      // Show and reorder visible cards
+      visibleCards.forEach((card, index) => {
+        card.classList.remove('hidden');
+        (card as HTMLElement).style.order = String(index);
+      });
+
+      // Update count
+      if (lessonCount) {
+        lessonCount.textContent = `Showing ${visibleCards.length} lesson${visibleCards.length !== 1 ? 's' : ''}`;
+      }
+    }
+
+    searchInput?.addEventListener('input', filterAndSort);
+    weekFilter?.addEventListener('change', filterAndSort);
+    tagFilter?.addEventListener('change', filterAndSort);
+    sortOrder?.addEventListener('change', filterAndSort);
+  });
+</script>
